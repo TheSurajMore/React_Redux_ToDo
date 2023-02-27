@@ -1,6 +1,10 @@
-export const addTodo = () => {
+export const addTodo = (todo) => {
     return{
-        type: "ADD_TODO"
+        type: "ADD_TODO",
+        payload: {
+            id: new Date().getTime().toString(),
+            todo:todo
+        }
     }
 }
 
